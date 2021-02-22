@@ -8,6 +8,9 @@
     width: 7.25rem;
 }
 
+nav{
+    z-index: 2;
+}
 nav a.nav-link{
     letter-spacing: 0.0375rem;
     cursor: pointer;
@@ -28,6 +31,12 @@ nav ul li{
     max-width: 17.25rem;
     padding: 0 !important;
     height: 6rem !important;
+}
+
+@media(max-width: 768px){
+    .navbar-brand{
+    width: 7rem;
+  }
 }
 
 .navbar-nav > li > a.active, .navbar-nav > li > a.active:focus{
