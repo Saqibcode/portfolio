@@ -2,15 +2,16 @@ import React from "react";
 
 import "./AboutMe.css";
 import "../App.css"
-//import author from "../me.jpg";
+import author from "../me.jpg";
 
 function AboutMe() {
     return (
+        <div className="aboutme">
         <div className="container py-5">
             <div className="row">
                 <div className="col-lg-6 col-xm-12">
                     <div className="photo-wrap mb-5">
-                      /*<img className="profile-img" src="#" alt="author..." />*/  
+                    <img className="profile-img" src={author} alt="author..." /> 
                     </div>
                 </div>
 
@@ -32,6 +33,7 @@ function AboutMe() {
                 </div>
 
             </div>
+        </div>
         </div>
     )
 }
