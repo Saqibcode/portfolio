@@ -5,12 +5,17 @@ import "./components/Header.css";
 import "./App.css";
 import "./components/Navbar.css";
 import "./components/Experience.css";
+import "./components/Portfolio.css"
 
 
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import AboutMe from './components/AboutMe';
 import Experience from "./components/Experience";
+import Portfolio from "./components/Portfolio";
+import PortfolioN from "./components/portfolioN";
+
+import { popupboxManager, popupboxContainer} from "react-popupbox"
 
 
 function App() {
@@ -43,6 +48,7 @@ function App() {
     <Header />
     <AboutMe />
     <Experience />
+    <Portfolio />
     </>
   );
 }
