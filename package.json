@@ -1,7 +1,7 @@
 {
   "name": "react_portfolio",
   "version": "0.1.0",
-  "homepage": "Saqibcode.github.io",
+  "homepage": "https://Saqibcode.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
