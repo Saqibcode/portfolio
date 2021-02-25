@@ -6,7 +6,7 @@ import author from "../me.jpg";
 
 function AboutMe() {
     return (
-        <div className="aboutme">
+        <div id="about" className="aboutme">
         <div className="container py-5">
             <div className="row">
                 <div className="col-lg-6 col-xm-12">
@@ -18,17 +18,18 @@ function AboutMe() {
                 <div className="col-lg-6 col-xm-12">
                     <h1 className="about-heading">About me</h1>
                     <p>
-                    I am a highly motivated, self-confident individual 
-                    who is able to adapt in a wide range of technical situations. 
-                    I have discplined my life through hard work and managing both 
-                    university and worklife. I can grasp new ideas and theories swiftly, 
-                    due to the vast experience in different situations.
-                    Through out my academic life, I have gained knowledge in 
-                    various aspects of the technology industry, for example, 
-                    programming, database and user experience. I have experience 
-                    in all phases of the software development lifecycle and have 
-                    an excellent track record of working within tight deadlines and 
-                    challenging condition. 
+                    I have been involved in many aspects of technology, 
+                    from designs to hard coding. I can grasp new ideas 
+                    and theories swiftly, due to the vast experience in 
+                    different situations. Through out my academic life 
+                    and work life, I have gained knowledge in various 
+                    aspects of the technology industry, for example, 
+                    programming, database and user experience. I am 
+                    currently focusing on full stack development, 
+                    using technologies such as Mongo DB, Express JS, 
+                    React JS and Node JS. I also have experience in 
+                    other languages such as Java (three years in university) 
+                    and SQL. 
                     </p>
                 </div>
 

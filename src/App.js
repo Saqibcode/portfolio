@@ -15,6 +15,7 @@ import Experience from "./components/Experience";
 import Portfolio from "./components/Portfolio";
 import PortfolioN from "./components/portfolioN";
 import Contact from "./components/Contacts";
+import Footer from "./components/Footer";
 
 import { popupboxManager, popupboxContainer} from "react-popupbox"
 
@@ -51,6 +52,7 @@ function App() {
     <Experience />
     <Portfolio />
     <Contact />
+    <Footer />
     </>
   );
 }

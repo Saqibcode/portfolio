@@ -2,37 +2,45 @@ import React from 'react'
 
 import "./Portfolio.css"
 
-import netflix from "../images/netflix.png"
-import cityGuide from "../images/city-guide-app.png"
-import portfolio from "../images/portfolio.png"
-import taskManager from "../images/task-manager.png"
+import fyp from "../images/fyp.PNG"
+
 
 import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearchPlus, faTemperatureLow } from "@fortawesome/free-solid-svg-icons"
 import { PopupboxContainer, PopupboxManager } from 'react-popupbox'
 import "react-popupbox/dist/react-popupbox.css";
 
+import MyPDF from '../Project-Report.pdf';
+
+
 const Portfolio= () =>{
 
-    const openPopupBoxNetflix = () =>{
+    const openPopupBoxFYP = () =>{
         const content=(
             <>
-        <img className="portfolio-image-popupbox" src={netflix} alt="Netflix"/>
+        <img className="portfolio-image-popupbox" src={fyp} alt="University Project"/>
         <p>
-            Description
+        This project presents an in-car information system and dashboard 
+        design of a driverless car. In this project, technologies such as axure xp was used
+        to design the screens. Below address
+        Links to a Live in-car simulator in 2D. Please feel free to scroll through the
+        report for more information about this project
         </p>
-        <b>Github</b> <a className="hyper-link" onClick={() => 
-        window.open("https://github.com/Saqibcode/QaCinema")}>https://github.com/Saqibcode/QaCinema</a>
+        <b>Live Demo</b> <a className="hyper-link" onClick={() => 
+        window.open("https://z28uox.axshare.com/")}>https://z28uox.axshare.com/</a>
+        <br/>
+        
+        <a href={MyPDF} download="Report.pdf"> <b>Download Report</b>  </a>
     </>   
         )
      
     PopupboxManager.open({ content })
     }
 
-    const popupConfigNetflix ={
+    const popupConfigFYP ={
         titleBar:{
             enable: true,
-            text:"Example One"
+            text:"In-car information system and dashboard design of a driverless car"
         },
         fadeIn:{
             enable: true,
@@ -44,41 +52,25 @@ const Portfolio= () =>{
 
 
     return (
-        <div className="portfolio-wrapper">
+        <div id="portfolio" className="portfolio-wrapper">
             <div className="container">
                 <h1 className="text-uppercase text-center py-5">Portfolio</h1>
                 <div className="image-box-wrapper row justify-content-center"> 
-                <div className="portfolio-image-box" onClick={openPopupBoxNetflix}>
-                <img className="portfolio-image" src={netflix} alt="Netflix" />
+                <div className="portfolio-image-box" onClick={openPopupBoxFYP}>
+                <img className="portfolio-image" src={fyp} alt="Driverless Car Project" />
                 <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus}/>
                 </div>
         
-                {/* - */}
                
-                <div className="portfolio-image-box">
-                <img className="portfolio-image" src={cityGuide} alt="City and guide" />
-                <div className="overflow"></div>
-                <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus}/>
-                </div>
 
-                {/* - */}
-                <div className="portfolio-image-box">
-                <img className="portfolio-image" src={portfolio} alt="Portfolio" />
-                <div className="overflow"></div>
-                <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus}/>
-                </div>
+                
 
-                {/* - */}
-                <div className="portfolio-image-box">
-                <img className="portfolio-image" src={taskManager} alt="task Manager" />
-                <div className="overflow"></div>
-                <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus}/>
-                </div>
+               
 
                 
                 </div>
             </div>
-            <PopupboxContainer {...popupConfigNetflix}/>
+            <PopupboxContainer {...popupConfigFYP}/>
         </div>
     )
 }
