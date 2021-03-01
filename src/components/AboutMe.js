@@ -29,7 +29,7 @@ function AboutMe() {
                     using technologies such as Mongo DB, Express JS, 
                     React JS and Node JS. I also have experience in 
                     other languages such as Java (three years in university) 
-                    and SQL. 
+                    and SQL.
                     </p>
                 </div>
 

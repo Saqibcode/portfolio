@@ -3,11 +3,12 @@ import React from 'react'
 import "./Portfolio.css"
 
 import fyp from "../images/fyp.PNG"
+import weather from "../images/weather.PNG"
 
 
 import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearchPlus, faTemperatureLow } from "@fortawesome/free-solid-svg-icons"
-import { PopupboxContainer, PopupboxManager } from 'react-popupbox'
+import {  PopupboxManager, PopupboxContainer } from 'react-popupbox'
 import "react-popupbox/dist/react-popupbox.css";
 
 import MyPDF from '../Project-Report.pdf';
@@ -38,41 +39,63 @@ const Portfolio= () =>{
     }
 
     const popupConfigFYP ={
-        titleBar:{
-            enable: true,
-            text:"In-car information system and dashboard design of a driverless car"
-        },
-        fadeIn:{
-            enable: true,
-            fadeInSpeed:500
-        }
-
+        fadeIn: false,
+        fadeInSpeed:500
     }
+
+    const openPopupBoxWeather = () =>{
+        const content=(
+            <>
+        <img className="portfolio-image-popupbox" src={weather} alt="Weather Project"/>
+        <p>
+        This is a weather app, mainly suitable for phones, this is a pure react App, which fetches
+        data from weathermap API; also fetches weather for the next 4 days 
+        </p>
+        <b>Live Demo</b> <a className="hyper-link" onClick={() => 
+        window.open("https://knowtheweathernow.herokuapp.com/")}>https://knowtheweathernow.herokuapp.com//</a>
+        <br/>
+        
+        <b>Github</b><a className="hyper-link" onClick={() => 
+        window.open("https://github.com/Saqibcode/weather-app")}> https://github.com/Saqibcode/weather-app </a>
+    </>   
+        )
+     
+    PopupboxManager.open({ content })
+    }
+
+    const popupConfigWeather ={
+        fadeIn: true,
+        fadeInSpeed:500
+    }
+        
+
     
-
-
     return (
         <div id="portfolio" className="portfolio-wrapper">
             <div className="container">
                 <h1 className="text-uppercase text-center py-5">Portfolio</h1>
                 <div className="image-box-wrapper row justify-content-center"> 
+
                 <div className="portfolio-image-box" onClick={openPopupBoxFYP}>
                 <img className="portfolio-image" src={fyp} alt="Driverless Car Project" />
+                <div className="overflow"></div>
                 <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus}/>
                 </div>
-        
-               
 
-                
-
-               
-
-                
+                <div className="portfolio-image-box" onClick={openPopupBoxWeather}>
+                <img className="weather-image" src={weather} alt="Driverless Car Project" />
+                <div className="overflow"></div>
+                <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus}/>
                 </div>
+
+
+            </div>
             </div>
             <PopupboxContainer {...popupConfigFYP}/>
+            <PopupboxContainer {...popupConfigWeather}/>
+           
         </div>
     )
 }
 
-export default Portfolio
+export default Portfolio;

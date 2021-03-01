@@ -13,9 +13,17 @@
 
 .portfolio-image{
     width: 15rem;
+    height: 8rem;
     border: 1px solid var(--primary-orange);
     padding: 0 0.5rem;
     
+}
+
+.weather-image{
+    width: 15rem;
+    height: 8rem;
+    border: 1px solid var(--primary-orange);
+    padding: 0 0.5rem;
 }
 
 .portfolio-image-box{
@@ -61,6 +69,12 @@
 
 .portfolio-image-popupbox{
     width: 38rem;
+    padding: 0 0.5rem;
+}
+
+.weather-image-popupbox{
+    width: 20rem;
+    height: 20rem;
     padding: 0 0.5rem;
 }
 
