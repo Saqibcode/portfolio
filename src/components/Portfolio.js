@@ -4,6 +4,7 @@ import "./Portfolio.css"
 
 import fyp from "../images/fyp.PNG"
 import weather from "../images/weather.PNG"
+import calculator from '../images/expense-tracker.PNG'
 
 
 import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -43,6 +44,8 @@ const Portfolio= () =>{
         fadeInSpeed:500
     }
 
+
+
     const openPopupBoxWeather = () =>{
         const content=(
             <>
@@ -67,6 +70,32 @@ const Portfolio= () =>{
         fadeIn: true,
         fadeInSpeed:500
     }
+
+
+    const openPopupBoxCalculator = () =>{
+        const content=(
+            <>
+        <img className="portfolio-image-popupbox" src={calculator} alt="Weather Project"/>
+        <p>
+        This is a react application which uses contextAPI and Global state to allow the end users to 
+        calculate total expense. You can check the demo and github link for more details:
+        </p>
+        <b>Live Demo</b> <a className="hyper-link" onClick={() => 
+        window.open("https://calculate-expense.herokuapp.com/")}> https://calculate-expense.herokuapp.com/</a>
+        <br/>
+        
+        <b>Github</b><a className="hyper-link" onClick={() => 
+        window.open("https://github.com/Saqibcode/expense-tracker")}> https://github.com/Saqibcode/expense-tracker</a>
+    </>   
+        )
+     
+    PopupboxManager.open({ content })
+    }
+
+    const popupConfigCalculator ={
+        fadeIn: true,
+        fadeInSpeed:500
+    }
         
 
     
@@ -88,11 +117,18 @@ const Portfolio= () =>{
                 <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus}/>
                 </div>
 
+                <div className="portfolio-image-box" onClick={openPopupBoxCalculator}>
+                <img className="weather-image" src={calculator} alt="Driverless Car Project" />
+                <div className="overflow"></div>
+                <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus}/>
+                </div>
+
 
             </div>
             </div>
             <PopupboxContainer {...popupConfigFYP}/>
             <PopupboxContainer {...popupConfigWeather}/>
+            <PopupboxContainer {...popupConfigCalculator}/>
            
         </div>
     )
